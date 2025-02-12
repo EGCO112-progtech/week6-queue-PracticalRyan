@@ -22,16 +22,16 @@ void enqueue_struct(Queue *q, int x)
     }
     new_node->data = x;
     q->tailPtr = new_node;
+    q->size++;
   }
-  q->size++;
 }
 
 int dequeue_struct(Queue *q)
 {
   NodePtr t = q->headPtr;
-  int value = t->data;
   if (q->size > 0)
   {
+    int value = t->data;
     NodePtr t = q->headPtr;
     // Move tail if last node
     q->headPtr = t->nextPtr;
@@ -44,6 +44,8 @@ int dequeue_struct(Queue *q)
     q->size--;
     return value;
   }
-  printf("Empty queue\n");
-  return -1;
+  else
+  {
+    printf("Empty queue\n");
+  }
 }
