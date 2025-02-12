@@ -20,7 +20,7 @@ int main(int argc, char **argv)
     if (strcmp(argv[i], "x") == 0)
     {
       x = dequeue_struct(&q);
-      printf("dequeueing %d\n", x);
+      printf("dequeing %d\n", x);
     }
     else
     {
