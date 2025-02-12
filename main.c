@@ -19,12 +19,12 @@ int main(int argc, char **argv)
   {
     if (strcmp(argv[i], "x") == 0)
     {
-      x = dequeue(&headPtr, &tailPtr);
+      x = dequeue_struct(&q);
       printf("dequeueing %d\n", x);
     }
     else
     {
-      enqueue(&headPtr, &tailPtr, atoi(argv[i]));
+      enqueue_struct(&q, atoi(argv[i]));
     }
   }
   return 0;
